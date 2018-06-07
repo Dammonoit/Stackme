@@ -1,0 +1,103 @@
+{% load static %}<html><head><link rel=stylesheet href='{% static 'test.css' %}'></head><body><div class="answer" data-answerid="10058215" id="answer-10058215" itemscope="" itemtype="http://schema.org/Answer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="vote">
+<input name="_id_" type="hidden" value="10058215"/>
+<a class="vote-up-off" title="This answer is useful">up vote</a>
+<span class="vote-count-post " itemprop="upvoteCount">96</span>
+<a class="vote-down-off" title="This answer is not useful">down vote</a>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>In example 3 you don't modify the array. In all other examples you modify either the contents or the internal array pointer. This is important when it comes to <a href="http://en.wikipedia.org/wiki/PHP">PHP</a> arrays because of the semantics of the assignment operator.</p>
+<p>The assignment operator for the arrays in PHP works more like a lazy clone. Assigning one variable to another that contains an array will clone the array, unlike most languages. However, the actual cloning will not be done unless it is needed. This means that the clone will take place only when either of the variables is modified (copy-on-write).</p>
+<p>Here is an example:</p>
+<pre><code>$a = array(1,2,3);
+$b = $a;  // This is lazy cloning of $a. For the time
+          // being $a and $b point to the same internal
+          // data structure.
+
+$a[] = 3; // Here $a changes, which triggers the actual
+          // cloning. From now on, $a and $b are two
+          // different data structures. The same would
+          // happen if there were a change in $b.
+</code></pre>
+<p>Coming back to your test cases, you can easily imagine that <code>foreach</code> creates some kind of iterator with a reference to the array. This reference works exactly like the variable <code>$b</code> in my example. However, the iterator along with the reference live only during the loop and then, they are both discarded. Now you can see that, in all cases but 3, the array is modified during the loop, while this extra reference is alive. This triggers a clone, and that explains what's going on here!</p>
+<p>Here is an excellent article for another side effect of this copy-on-write behaviour: <a href="http://fabien.potencier.org/article/48/the-php-ternary-operator-fast-or-not">The PHP Ternary Operator: Fast or not?</a></p>
+</div>
+<div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+<div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a class="short-link" href="/a/10058215" id="link-post-10058215" title="short permalink to this answer">share</a><span class="lsep">|</span><a class="suggest-edit-post" href="/posts/10058215/edit" title="">improve this answer</a></div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+<div class="user-action-time">
+<a href="/posts/10058215/revisions" title="show all edits to this post">edited <span class="relativetime" title="2014-04-15 11:10:06Z">Apr 15 '14 at 11:10</span></a>
+</div>
+<div class="user-gravatar32">
+<a href="/users/63550/peter-mortensen"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://i.stack.imgur.com/RIZKi.png?s=32&amp;g=1" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/63550/peter-mortensen">Peter Mortensen</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score 12,506">12.5k</span><span title="19 gold badges"><span class="badge1"></span><span class="badgecount">19</span></span><span title="82 silver badges"><span class="badge2"></span><span class="badgecount">82</span></span><span title="110 bronze badges"><span class="badge3"></span><span class="badgecount">110</span></span>
+</div>
+</div>
+</div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+<div class="user-action-time">
+        answered <span class="relativetime" title="2012-04-07 20:43:49Z">Apr 7 '12 at 20:43</span>
+</div>
+<div class="user-gravatar32">
+<a href="/users/383007/linepogl"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://www.gravatar.com/avatar/2e7382e45c23afe2525e117cc1636677?s=32&amp;d=identicon&amp;r=PG" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/383007/linepogl">linepogl</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score ">7,068</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span><span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="post-layout--right">
+<div class="comments js-comments-container " id="comments-10058215">
+<ul class="comments-list js-comments-list" data-addlink-disabled="true" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-remaining-comments-count="0">
+<li class="comment js-comment " data-comment-id="12872146" id="comment-12872146">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body" style="display: block;">
+<span class="comment-copy">seems your right, I made some example which demonstrate that:  <a href="http://codepad.org/OCjtvu8r" rel="nofollow noreferrer">codepad.org/OCjtvu8r</a> one difference from your example - it does not copy if you change value, only if change keys.</span>
+                    – <a class="comment-user" href="/users/815386/zb" title="6,904 reputation">zb'</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2012-04-07 21:35:46Z">Apr 7 '12 at 21:35</span></span>
+<span class="edited-yes" title="this comment was edited 1 time"></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="12880830" id="comment-12880830">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body" style="display: block;">
+<span class="comment-copy">This does indeed explain all the behavior show above, and it can be nicely illustrated by calling <code>each()</code> at the end of the first test case, where <a href="http://codepad.org/XNlmCPE9" rel="nofollow noreferrer">we see</a> that the array pointer of the original array points to the second element, since the array was modified during the first iteration. This also seems to demonstrate that <code>foreach</code> moves the array pointer on before executing the code block of the loop, which I was not expecting - I would have thought it would do this at the end. Many thanks, this clears it up for me nicely.</span>
+                    – <a class="comment-user owner" href="/users/889949/daverandom" title="64,895 reputation">DaveRandom</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2012-04-08 15:59:07Z">Apr 8 '12 at 15:59</span></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div data-anon="true" data-rep="50" id="comments-link-10058215">
+<a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno"> | </span>
+<a class="js-show-link comments-link dno" href="#" onclick="" title="expand to show all comments on this post"></a>
+</div>
+</div> </div>
+</div>
+</body></html>
