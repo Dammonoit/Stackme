@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	
+  <meta charset="UTF-8">
+  <title><Table> Responsive</title>
+  
+  
+  
+      <link rel="stylesheet" href="{%static 'css/style_output.css' %}">
+
+  
+</head>
+
+<body>
+
+  <h1><span class="blue"></span>StackMe<span class="blue"></span> <span class="yellow"></pan></h1>
+
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h3 style="align: center;">Index</h3></th>
+			<th><h3 style="text-align: center;">Questions</h3></th>
+			<th><h3 style="align: center;">Votes</h3></th>			
+		</tr>
+	</thead>
+	<tbody>
+		{% for link in details %}
+			<tr>
+				<td>{{link.0}}</td>
+				<td>{{link.1}}</td>
+				<td><a href="/p1/hitlink?link={{link.3}}">{{link.2}}</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+  
+  
+
+</body>
+
+</html>

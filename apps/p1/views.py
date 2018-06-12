@@ -13,7 +13,6 @@ num=[]
 temp=[]
 dictionary={}
 nextUrl="https://www.stackoverflow.com"
-
 def main(request):
     
     # This is the main url
@@ -28,20 +27,17 @@ def main(request):
     links(soup)
     questions(soup)
     get_dict(intial_class)
-    htm()
+    #htm()
+    #template = loader.get_template('output.html')
+    details = []
+    for t,q,n,l in zip(temp,Question,noOfVotes,Link):
+        details.extend([[t,q,n,l]])
+    
+    context={"details":details}     
+    
+    return render(request,'output_1.html',context)
 
-    return render(request,'demo.html')
 
-def htm():
-    with open("demo.html","w") as f:
-        f.write("<html><style> body {background-color: #cococo;} h1 {align:center;color: blue;font-family: verdana;} </style><body><h1>Choose From the Question Below.</h1>")
-        counter = 0
-        for x in dictionary:
-            counter +=1
-            l = "/p1/hitlink?link="+dictionary[x]["Link"]
-            f.write("<a href = %s ><h3>Question %d: %s</h3></a>" %(l, counter, dictionary[x]["question"]))
-        f.write("</body></html>")
-       
 def questions_page(page):
     # Page 1 Beautiful Soup
     soup = BeautifulSoup(page,"lxml")
@@ -217,9 +213,7 @@ def hit_link(request):
 
 # Create your views here.
 def click(request):
-        clickit="You searched"
-        context={"clickit":clickit}
-        return render(request,'index.html',context)
+        return render(request,'index.html')
         
 def about(request):
         #context={"clickit":clickit}

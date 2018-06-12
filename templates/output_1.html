@@ -1,0 +1,56 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title>StackMe</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="{%static 'css/style_output1.css' %}">
+
+  
+</head>
+
+<body>
+
+  <section>
+  <!--for demo wrap-->
+  <h1>Choose From the Questions Below.</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Questions</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+		{% for link in details %}
+			<tr>
+				<td>{{link.0}}</td>
+				<td>{{link.1}}</td>
+				<td><a href="/p1/hitlink?link={{link.3}}">{{link.2}}</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+    </table>
+  </div>
+</section>
+<div class="made-with-love">
+  Made by
+  <a target="_blank" href="https://twitter.com/Dammonoit">Dharmendra Choudhary</a>
+</div>
+
+	
+</body>
+
+</html>
