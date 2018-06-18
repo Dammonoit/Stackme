@@ -2,8 +2,7 @@
    # **Dharmendra Choudhary**<br/>
    # **VIT university,Vellore,Tamil Nadu,India**
 
-<br/>
-**Links:-** <br/>   
+<br/>  
 **[Twitter](https://twitter.com/Dammonoit)**  <br/>
 **[Facebook](https://www.facebook.com/profile.php?id=100022695248450)** <br/>
 **[Gitlab](https://gitlab.com/Dammonoit)** <br/>
@@ -11,7 +10,7 @@
 
 <br/>
 
-**Stackme** is a Web application or you can saycombination of them designed to retract data or desired questions directly from stackoverflow using BeautifulSoup which is a web scrappig or web Crawling tool and Django which is a Back-end web framework runs on python.
+**_Stackme_** is a Web application or you can saycombination of them designed to retract data or desired questions directly from stackoverflow using BeautifulSoup which is a web scrappig or web Crawling tool and Django which is a Back-end web framework runs on python.
 
 <br/>                                                    
 
@@ -43,7 +42,9 @@ Data displayed by most websites can only be viewed using a web browser. They do 
 The home page of this website has a search bar where you can search any questions which are related to stackexhange or stacoverflow in particular so what i did, i included a my webscrapping code in view file in the app where a dynamic web scrapping occurs which stores only the questions with only high number of votes or questions with approval right tick which is green in colour then the list of questions will be portrayed on a html page from where i've linked the page where only that specific answer will be shown.
 
 ### **Bibliography.**<br/>
-**[1] (https://docs.djangoproject.com/en/2.0/intro/tutorial01/).**  <br/>
-**[2] (https://www.python.org/)** <br/>
-**[3] [Download Django and Create Virtual environment](https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/).** 
+**[1]  `Django: ` : <https://docs.djangoproject.com/en/2.0/intro/tutorial01/>**  <br/>
+**[2]  `Python:` :  <https://www.python.org/>** <br/>
+**[3]   `Download Django and Create Virtual environment` : (https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/).** 
+
+
 
