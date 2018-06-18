@@ -5,7 +5,7 @@
 <br/>  
  [Twitter]https://twitter.com/Dammonoit  <br/>
  **[Facebook] (https://www.facebook.com/profile.php?id=100022695248450) <br/>
- [Gitlab] (https://gitlab.com/Dammonoit) <br/>
+ [Gitlab](#https://gitlab.com/Dammonoit) <br/>
  [Bitbucket] (https://bitbucket.org/Dammonoit/) <br/>
 
 <br/>
