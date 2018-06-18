@@ -2,8 +2,9 @@
    # **Dharmendra Choudhary**<br/>
    # **VIT university,Vellore,Tamil Nadu,India**
 
-<br/>  
- [`Twitter`] : https://twitter.com/Dammonoit  <br/>
+<br/>
+ (link: https://twitter.com/Dammonoit: Twitter)
+ [Twitter] : https://twitter.com/Dammonoit  <br/>
  [Facebook] : https://www.facebook.com/profile.php?id=100022695248450 <br/>
  [Gitlab] : https://gitlab.com/Dammonoit <br/>
  [Bitbucket] : https://bitbucket.org/Dammonoit/ <br/>
