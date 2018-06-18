@@ -30,9 +30,9 @@ Data displayed by most websites can only be viewed using a web browser. They do 
                                                  
 ### **How to execute Stackme?**
 
-1. Open terminal using ctrl+alt+T in the same directory where manage.py file is saved or when can say that the home directory.
-2. type: python manage.py runserver 8000   (port number is optional and by default is 8000).
-3. Open the browser and write on the url: localhost:8000/p1/clk 
+**1.** Open terminal using ctrl+alt+T in the same directory where manage.py file is saved or when can say that the home directory.
+**2.** type: python manage.py runserver 8000   (port number is optional and by default is 8000).
+**3.** Open the browser and write on the url: localhost:8000/p1/clk 
 <br/>
                                                  
 
