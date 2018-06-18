@@ -42,5 +42,5 @@ The home page of this website has a search bar where you can search any question
 **Bibliography.<br/>
 [1] (https://docs.djangoproject.com/en/2.0/intro/tutorial01/)  <br/>
 [2] (https://www.python.org/)   <br/>
-[3] [Download Django and Create Virtual environment] (https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/) **<br/>
+[3] [Download Django and Create Virtual environment](https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/) **<br/>
 
