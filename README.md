@@ -4,10 +4,10 @@
 
 <br/>
 **Links:-** <br/>   
-**[Twitter] (https://twitter.com/Dammonoit)**  <br/>
-**[Facebook] (https://www.facebook.com/profile.php?id=100022695248450)** <br/>
-**[Gitlab] (https://gitlab.com/Dammonoit)** <br/>
-**[Bitbucket] (https://bitbucket.org/Dammonoit/)** <br/>
+**[Twitter](https://twitter.com/Dammonoit)**  <br/>
+**[Facebook](https://www.facebook.com/profile.php?id=100022695248450)** <br/>
+**[Gitlab](https://gitlab.com/Dammonoit)** <br/>
+**[Bitbucket](https://bitbucket.org/Dammonoit/)** <br/>
 
 <br/>
 
@@ -31,7 +31,9 @@ Data displayed by most websites can only be viewed using a web browser. They do 
 ### **How to execute Stackme?**
 
 **1.** Open terminal using ctrl+alt+T in the same directory where manage.py file is saved or when can say that the home directory.
+<br/>
 **2.** type: python manage.py runserver 8000   (port number is optional and by default is 8000).
+<br/>
 **3.** Open the browser and write on the url: localhost:8000/p1/clk 
 <br/>
                                                  
