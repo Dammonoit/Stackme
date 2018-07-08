@@ -40,4 +40,4 @@ The home page of this website has a search bar where you can search any question
 **[[1]]   `Django` :  <https://docs.djangoproject.com/en/2.0/intro/tutorial01/>** <br/>
 **[[2]]   `Python` :  < https://www.python.org/ >** <br/>
 **[[3]]   `Download Django and Create Virtual environment ` :  <https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/.>** <br/>
-**[[1]]   `Beautiful Soup` :  <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>** <br/>
+**[[4]]   `Beautiful Soup` :  <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>** <br/>
